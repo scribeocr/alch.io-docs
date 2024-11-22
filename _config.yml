@@ -1,0 +1,8 @@
+remote_theme: just-the-docs/just-the-docs
+callouts:
+  warning:
+    title: Warning
+    color: red
+  warning:
+    title: Highlight
+    color: yellow
