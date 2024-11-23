@@ -56,26 +56,33 @@ Select `Download` > `Download` to export the tables identified in previous steps
 
 ## Values that Span Multiple Columns
 Some tables include single entries that span the width of multiple columns.  For example, below is part of a different table from the Amazon 8K filing showing shareholder votes by proposal.  The description of each proposal spans the width of all columns.  
+
 ![data_table_adv_1.png]({{ site.baseurl }}/img/data_table_adv_1.png)
 
 By default, individual words are assigned to the column they overlap the most with.  However, this behavior is undesirable in this case, as it results in the proposal descriptions being split up and assigned to the same columns as the vote totals. 
+
 ![data_table_adv_2.png]({{ site.baseurl }}/img/data_table_adv_2.png)
 
 To handle this case, start by creating a new column that includes only the start of the proposal description.  Next, select the new column, open the `Set Overlap Rules` drop-down menu, set the rules to `Left` and `Line`.  This tells Alch to include all lines where the left bound is inside the selected column.
+
 ![data_table_adv_3.png]({{ site.baseurl }}/img/data_table_adv_3.png)
 
 We can confirm this change worked as expected by checking the viewer.  All proposal descriptions are now highlighted the same color as the first column, indicating they are all being assigned to the first column.
+
 ![data_table_adv_4.png]({{ site.baseurl }}/img/data_table_adv_4.png)
 
 The resulting `.xlsx` file is shown below.  Basic cleaning steps in a program such as Excel, R, or Python can be used to produce a dataset where each row contains a proposal description and vote totals.
+
 ![data_table_adv_5.png]({{ site.baseurl }}/img/data_table_adv_5.png)
 
 ## Layouts that Span Multiple Pages
 When a single table layout applies to most or all pages within a document, it is not necessary to re-draw the layout on every page.  Instead, the current layout can be set as "default" by clicking `Save As Default`.  The default layout is applied to all pages that have not been edited manually. 
+
 ![data_table_adv2_1.png]({{ site.baseurl }}/img/data_table_adv2_1.png)
 
 ### Applying Layouts to a Subset of Pages
 It is not currently possible to automatically apply a layout to a subset of pages.  The only way to apply a layout to multiple pages is by setting it as default, which applies it to all pages which have not been individually edited.  However, as data can be subset to a specific page range during the download step, applying the default layout to unneeded pages is generally not problematic.
 
 For example, say that a 100 page document contains tables in pages 40-60, and all tables have the same layout.  This document could be processed by setting a single default layout, and setting the output to only include pages 40-60.
+
 ![data_table_adv2_2.png]({{ site.baseurl }}/img/data_table_adv2_2.png)
