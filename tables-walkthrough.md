@@ -13,7 +13,7 @@ In this example, we will extract a single table from an Amazon 8K filing.  This 
 ### Step 1: Upload Document, Create Text Layer
 Start by uploading your document.  Documents may either be (1) a single PDF file or (2) a series of PNG or JPEG images containing scanned pages.
 
-If the document uploaded is a series of images or an image-native PDF, you will be prompted to run OCR to recognize text.  This step is optional when uploading an image-native PDF document that already contains PDF data, and is skipped entirely for text-native PDF documents.
+If the document uploaded is a series of images or an image-native PDF, you will be prompted to click `Recognize Text` to run OCR and recognize text.  This step is optional when uploading an image-native PDF document that already contains PDF data, and is skipped entirely for text-native PDF documents.
 
 ![recognize_prompt_1.png]({{ site.baseurl }}/img/recognize_prompt_1.png)
 
